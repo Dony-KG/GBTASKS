@@ -3,7 +3,6 @@
 
 using static System.Console;
 
-
 Write("Введите первое число: ");
 
 int a = int.Parse(ReadLine()!);
