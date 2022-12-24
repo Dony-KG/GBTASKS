@@ -4,5 +4,4 @@
 using static System.Console;
 Write("Введите трехзначное число: ");
 int a = int.Parse(ReadLine()!);
-//int second = a%100/10;
 WriteLine($"Вторая цифра числа {a} является: " + a%100/10);
