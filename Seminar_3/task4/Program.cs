@@ -5,6 +5,5 @@ using static System.Console;
 Clear();
 Write("Введите количество деталей: ");
 int det = int.Parse(ReadLine()!);
-
-WriteLine(det%6==0 ? $"Каждый младший сделал по {det/6}, а старший сделал {det/1.5}"
+WriteLine(det%6==0 ? $"Каждый младший сделал по {det/6}, а старший сделал {det/6*4}"
 : "Старший токарь ошибся");
