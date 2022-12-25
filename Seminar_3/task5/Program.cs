@@ -14,4 +14,4 @@ int.TryParse(ReadLine(),out int y2);
 
 double length= Math.Sqrt(Math.Pow((x2-x1),2)+Math.Pow((y2-y1),2));
 
-WriteLine("Длина отрезка равна - " + length);
+WriteLine($"Длина отрезка равна - {length:f2}");
