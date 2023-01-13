@@ -7,7 +7,7 @@ using static System.Console;
 Write("Введите число: ");
 int.TryParse(ReadLine(), out int number);
 
-Write("Результат = " + Sum (number));
+Write($"Сумма цифр числа {number} = " + Sum (number));
 
 
 int Sum (int n1)
