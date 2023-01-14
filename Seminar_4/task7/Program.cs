@@ -9,12 +9,12 @@ WriteLine("до: ");
 int.TryParse(ReadLine(),out int num2);
 
 
-int [] arr = GetArray(size, num1, num2);
+int [] arr = NewArray(size, num1, num2);
 
 PrintArray(arr);
 
 
-int[] GetArray (int Size, int Num1, int Num2)
+int[] NewArray (int Size, int Num1, int Num2)
 {
 int [] array = new int [Size];
 for (int i = 0; i < array.Length; i++)
