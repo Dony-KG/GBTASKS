@@ -5,9 +5,9 @@
 using static System.Console;
 Clear();
 
-PrintArray();
+CreatePrintArray();
 
-void PrintArray()
+void CreatePrintArray()
 
 {
 int [] array = new int [8];
