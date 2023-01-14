@@ -22,7 +22,7 @@ int Sum (int n1)
         i++;
     }
     int c=0;
-    for(int j=i-1;j>=0; j--)
+    for(int j=i-1;j>=0; j--) // сложение цифр
     {
         int des=Convert.ToInt32(Math.Pow(10,j));
         c=n1/des;
