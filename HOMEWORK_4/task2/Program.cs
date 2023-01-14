@@ -13,7 +13,7 @@ Write($"Сумма цифр числа {number} = " + Sum (number));
 int Sum (int n1)
 {
     if (n1 == 0) return 0;
-    int n2=Math.Abs(n1);
+    int n2=n1;
     int result = 0;
     int i=0;
     while (n2 > 0)//вычисление сколькозначное число
