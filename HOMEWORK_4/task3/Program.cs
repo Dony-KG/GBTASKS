@@ -7,9 +7,6 @@ Clear();
 
 PrintArray();
 
-
-
-
 void PrintArray()
 
 {
