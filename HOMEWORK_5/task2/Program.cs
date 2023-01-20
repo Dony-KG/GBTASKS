@@ -17,7 +17,7 @@ int OddSum(int[] inArray)
     int result = 0;
     for (int i = 0; i < inArray.Length; i++)
     {
-        result += i % 2 == 0 ? 0 : inArray[i];
+        result += i % 2 != 0 ? inArray[i] : 0;
     }
 
     return result;
