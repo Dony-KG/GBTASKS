@@ -10,9 +10,7 @@ WriteLine(Triangle(sides) ? "Треугольник с такими сторон
 
 bool Triangle(string[] side)
 {
-if (int.Parse(side[0]) + int.Parse(side[1])>int.Parse(side[2]) &&
+return (int.Parse(side[0]) + int.Parse(side[1])>int.Parse(side[2]) &&
     int.Parse(side[1]) + int.Parse(side[2])>int.Parse(side[0]) &&
-    int.Parse(side[0]) + int.Parse(side[2])>int.Parse(side[1])) return true;
-
-return false;
+    int.Parse(side[0]) + int.Parse(side[2])>int.Parse(side[1])); 
 }
