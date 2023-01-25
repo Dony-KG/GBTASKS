@@ -14,24 +14,23 @@ int[] intParams = Array.ConvertAll(ReadLine()!.Split(" ", StringSplitOptions.Rem
 int[,] array = GetMatrixArray(intParams[0], intParams[1], intParams[2], intParams[3]);
 PrintMatrixArray(array);
 WriteLine();
-//double[] AverageColumnArray = GetAverageColumnArray(array);
 WriteLine($"[{string.Join("   ", GetAverageColumnArray(array))}]");
 
 double[] GetAverageColumnArray(int[,] inArray)
 {
     double[] result = new double[inArray.GetLength(1)];
 
-    for (int i = 0; i <  inArray.GetLength(1); i++)
+    for (int i = 0; i < inArray.GetLength(1); i++)
     {
-        int j= 0;
-        for ( ; j < inArray.GetLength(0); j++)
+        int j = 0;
+        for (; j < inArray.GetLength(0); j++)
         {
             result[i] += inArray[j, i];
         }
-        result[i]=Math.Round((result[i]/j),1);
+        result[i] = Math.Round((result[i] / j), 1);
     }
 
-    return  result;
+    return result;
 }
 
 
