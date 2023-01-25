@@ -19,10 +19,10 @@ WriteLine();
 WriteLine("Введите строку и столбец искомого элемента через пробел: ");
 GetElement(array, Array.ConvertAll(ReadLine()!.Split(" ", StringSplitOptions.RemoveEmptyEntries), int.Parse));
 
-void GetElement (int[,] inArray, int[] rowColumn)
+void GetElement(int[,] inArray, int[] rowColumn)
 {
-WriteLine(rowColumn[0]>=inArray.GetLength(0)||rowColumn[1]>=inArray.GetLength(1)
-          ? $" Такого элемента не существует" : inArray [rowColumn[0],rowColumn[1]]);
+    WriteLine(rowColumn[0] >= inArray.GetLength(0) || rowColumn[1] >= inArray.GetLength(1)
+              ? $" Такого элемента не существует" : inArray[rowColumn[0], rowColumn[1]]);
 }
 
 
