@@ -10,7 +10,7 @@ Clear();
 WriteLine("Введите размер матрицы и диапозон значений через пробел: ");
 string[] parametrs = ReadLine()!.Split(" ", StringSplitOptions.RemoveEmptyEntries);
 
-
+//int[] intParams=Array.ConvertAll(ReadLine()!.Split(new char[]{'\"','#',';',',','s'},StringSplitOptions.RemoveEmptyEntries),int.Parse);
 int[,] array = GetMatrixArray(int.Parse(parametrs[0]), int.Parse(parametrs[1]), int.Parse(parametrs[1]), int.Parse(parametrs[3]));
 
 PrintMatrixArray(array);
