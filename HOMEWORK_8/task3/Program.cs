@@ -9,53 +9,60 @@
 using static System.Console;
 
 Clear();
-WriteLine("Введите размер квадратной матрицы и диапозон целых значений через пробел: ");
+WriteLine("Введите размер 1й матрицы и диапозон целых значений через пробел: ");
 int[] intParams = Array.ConvertAll(ReadLine()!.Split(" ", StringSplitOptions.RemoveEmptyEntries), int.Parse);
 
-int[,] matrix = GetMatrix(intParams[0], intParams[1], intParams[2]);
-int[,] matrix1 = GetMatrix(intParams[0], intParams[1], intParams[2]);
+int[,] matrix = GetMatrix(intParams[0], intParams[1], intParams[2], intParams[3]);
+
+WriteLine("Введите размер 2й матрицы и диапозон целых значений через пробел: ");
+int[] intParams1 = Array.ConvertAll(ReadLine()!.Split(" ", StringSplitOptions.RemoveEmptyEntries), int.Parse);
+
+int[,] matrix1 = GetMatrix(intParams1[0], intParams1[1], intParams1[2], intParams1[3]);
 
 
 PrintMatrix(matrix);
 WriteLine();
 PrintMatrix(matrix1);
 WriteLine();
-PrintMatrix(MultMatrix(matrix,matrix1));
+if (matrix.GetLength(1) != matrix1.GetLength(0))
+    WriteLine("Эти матрицы нельзя умножить на друг друга!");
+else
+    PrintMatrix(MultMatrix(matrix, matrix1));
 
 
 
 
-int[,] MultMatrix(int[,] inMatrix1,int[,] inMatrix2)
+int[,] MultMatrix(int[,] inMatrix1, int[,] inMatrix2)
 {
-     
 
-    int[,] resultMutrix = new int[inMatrix1.GetLength(0),inMatrix1.GetLength(1)];
-    for (int i = 0; i < inMatrix1.GetLength(0); i++)
+    int[,] resultMutrix = new int[inMatrix1.GetLength(0), inMatrix2.GetLength(1)];
+    for (int i = 0; i < resultMutrix.GetLength(0); i++)
     {
-        for (int j = 0; j < inMatrix1.GetLength(1); j++)
+        for (int j = 0; j < resultMutrix.GetLength(1); j++)
         {
             for (int k = 0; k < inMatrix1.GetLength(1); k++)
-            resultMutrix[i,j] += inMatrix1[i, k]*inMatrix2[k, j];
+                resultMutrix[i, j] += inMatrix1[i, k] * inMatrix2[k, j];
         }
     }
-    
+
     return resultMutrix;
 }
 
 
-int[,] GetMatrix(int size, int minValue, int maxValue)
+int[,] GetMatrix(int rows, int columns, int minValue, int maxValue)
 {
     Random rnd = new Random();
-    int[,] resultMatrix = new int[size, size];
-    for (int i = 0; i < size; i++)
+    int[,] resultMatrix = new int[rows, columns];
+    for (int i = 0; i < rows; i++)
     {
-        for (int j = 0; j < size; j++)
+        for (int j = 0; j < columns; j++)
         {
             resultMatrix[i, j] = rnd.Next(minValue, maxValue + 1);
         }
     }
     return resultMatrix;
 }
+
 
 
 
