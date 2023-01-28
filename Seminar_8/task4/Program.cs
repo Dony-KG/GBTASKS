@@ -42,7 +42,7 @@ void DeleteRowsAndColumnsWhithMin(int[,] inMatrix)
             }
         }
     }
-    PrintMatrix1(result); WriteLine();
+    PrintMatrixWhithNoNull(result); WriteLine();
 }
 
 
@@ -125,7 +125,7 @@ void PrintMatrix(int[,] inMatrix)
     }
 }
 
-void PrintMatrix1(int[,] inMatrix)
+void PrintMatrixWhithNoNull(int[,] inMatrix)
 {
     int k = 0;
     for (int i = 0; i < inMatrix.GetLength(0); i++)
@@ -138,6 +138,7 @@ void PrintMatrix1(int[,] inMatrix)
                 k = j;
             }
             
-        }if (inMatrix[i, k] != 0) WriteLine();
+        }
+        if (inMatrix[i, k] != 0) WriteLine();
     }
 }
